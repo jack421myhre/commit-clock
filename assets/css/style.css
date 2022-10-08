@@ -22,9 +22,13 @@ body {
     margin: 48px 0 24px 0;
 }
 
+.container h2 {
+    margin-bottom: 24px;
+}
+
 .timer-button {
     width: 200px;
-    height: 100px;
+    height: 80px;
     background-color: #2b2d42;
     color: #edf2f4;
 }
@@ -36,7 +40,16 @@ body {
 }
 
 .timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 2px solid red;
     width: 600px;
     height: 200px;
+
+}
+
+.countdown {
+    font-size: 48px;
+    font-weight: 300;
 }

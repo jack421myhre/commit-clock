@@ -6,23 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Commit Clock</title>
+    <title>Git Commit Clock</title>
 </head>
 
 <body>
     <main class="main">
         <div class="container">
             <h1>Git Commit Clock</h1>
-            <h2>Need a reminder to commit? Click the button below to begin a timer and we'll remind you!</h2>
-            <button class="timer-button">Click Me to Start!</button>
+            <h2>Need a reminder to commit? </h2>
+            <h2>Click the button below to begin a timer and we'll remind you!</h2>
+            <button class="timer-button" id="timer-button">Click Me to Start!</button>
         </div>
         <div class="timer" id="timer">
-
+            <h3 class="countdown">
+                <span id="minutes">30</span> :
+                <span id="seconds">00</span>
+            </h3>
         </div>
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
     <script src="./assets/js/app.js"></script>
 </body>
 
