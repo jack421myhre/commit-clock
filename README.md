@@ -22,7 +22,7 @@ Load the page in your browser and start the timer by clicking the button. Pressi
 ## License
 This repository is protected under the MIT License.
 
-http://unlicense.org/
+[http://unlicense.org/](https://opensource.org/licenses/MIT)
 ## Future Development
 Adding a slider for custom time intervals.
 ## Tests
