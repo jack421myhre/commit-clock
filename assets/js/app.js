@@ -1,24 +1,49 @@
 
 const timerBtn = document.getElementById('timer-button');
-let minutes = document.getElementById('minutes').innerHTML;
-let seconds = document.getElementById('seconds').innerHTML;
-console.log(minutes, seconds);
-
-let minuteInterval = setInterval(() => {
-
-}, 60000);
+let minSection = document.getElementById('minutes');
+let secSection = document.getElementById('seconds');
 
 
+function init() {
+    let minutes = 9;
+    let seconds = 9;
+    minSection.innerHTML = minutes;
+    secSection.innerHTML = seconds;
+
+    function endTimer() {
+        clearInterval(minuteInterval);
+        clearInterval(secondInterval);
+
+    }
+
+    minutes -= 1;
+    const minuteInterval = setInterval(() => {
+        minSection.innerHTML = minutes;
+        minutes -= 1;
+
+        if (minutes < 0) {
+            endTimer();
+        }
+    }, 1000);
 
 
 
 
+    seconds -= 1;
+    const secondInterval = setInterval(() => {
+        secSection.innerHTML = seconds;
+        seconds -= 1;
 
-// ----------------------
-// --- Event Listener ---
-// ----------------------
+        if (seconds < 0) {
+            seconds = 9;
+        }
+    }, 1000);
 
 
+    // ----------------------
+    // --- Event Listener ---
+    // ----------------------
 
+};
 
-
+init();
