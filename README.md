@@ -2,6 +2,8 @@
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 ## Description
 As I find my workflow on a project, I seem to always forget to commit often. This tool solves that issue by setting 60 minute work intervals where an audible alert will play to remind the user that it's time to commit. 
+## Deployed Application
+https://jack421myhre.github.io/commit-clock/
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
