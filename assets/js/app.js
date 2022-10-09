@@ -1,49 +1,76 @@
+const startBtn = document.getElementById('start-button');
+const stopBtn = document.getElementById('stop-button');
+const startBtnContainer = document.querySelector('.start-container');
+const stopBtnContainer = document.querySelector('.stop-container');
+const startBtnClasslist = startBtnContainer.classList;
+const stopBtnClasslist = stopBtnContainer.classList;
+const minSection = document.getElementById('minutes');
+const secSection = document.getElementById('seconds');
 
-const timerBtn = document.getElementById('timer-button');
-let minSection = document.getElementById('minutes');
-let secSection = document.getElementById('seconds');
+let minuteInterval;
+let secondInterval;
 
+function stopTimer() {
+    clearInterval(minuteInterval);
+    clearInterval(secondInterval);
+}
+
+function buttonToggle() {
+    if (startBtnClasslist.contains('active')) {
+        startBtnClasslist.replace('active', 'hidden');
+        stopBtnClasslist.replace('hidden', 'active');
+    } else {
+        startBtnClasslist.replace('hidden', 'active');
+        stopBtnClasslist.replace('active', 'hidden');
+    }
+}
 
 function init() {
-    let minutes = 9;
-    let seconds = 9;
+    let minutes = 29;
+    let seconds = 59;
     minSection.innerHTML = minutes;
     secSection.innerHTML = seconds;
 
-    function endTimer() {
-        clearInterval(minuteInterval);
-        clearInterval(secondInterval);
-
-    }
 
     minutes -= 1;
-    const minuteInterval = setInterval(() => {
+    minuteInterval = setInterval(() => {
         minSection.innerHTML = minutes;
         minutes -= 1;
 
         if (minutes < 0) {
-            endTimer();
+            stopTimer();
         }
-    }, 1000);
-
-
-
+        // Add function to change to 'TIME TO COMMIT!'
+    }, 60000);
 
     seconds -= 1;
-    const secondInterval = setInterval(() => {
+    secondInterval = setInterval(() => {
         secSection.innerHTML = seconds;
         seconds -= 1;
 
         if (seconds < 0) {
-            seconds = 9;
+            seconds = 59;
         }
     }, 1000);
 
-
-    // ----------------------
-    // --- Event Listener ---
-    // ----------------------
-
 };
 
-init();
+
+// -----------------------
+// --- Event Listeners ---
+// -----------------------
+startBtn.addEventListener('click', () => {
+    // Starts the timer
+    init();
+    // Switches the button
+    buttonToggle();
+});
+
+stopBtn.addEventListener('click', () => {
+    // Stops the timer
+    stopTimer();
+    // Switches the button again. When pressed, the timer will restart.
+    buttonToggle();
+});
+
+

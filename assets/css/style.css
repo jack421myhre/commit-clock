@@ -18,7 +18,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid yellow;
     margin: 48px 0 24px 0;
 }
 
@@ -26,14 +25,14 @@ body {
     margin-bottom: 24px;
 }
 
-.timer-button {
+.custom-button {
     width: 200px;
     height: 80px;
     background-color: #2b2d42;
     color: #edf2f4;
 }
 
-.timer-button:hover {
+.custom-button:hover {
     background-color: #edf2f4;
     color: #2b2d42;
     cursor: pointer;
@@ -43,7 +42,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
+    border: 2px solid black;
     width: 600px;
     height: 200px;
 
@@ -52,4 +51,13 @@ body {
 .countdown {
     font-size: 48px;
     font-weight: 300;
+}
+
+/* EVENT LISTENER STYLES */
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
 }
