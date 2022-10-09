@@ -1,5 +1,5 @@
 # Commit Clock
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Description
 As I find my workflow on a project, I seem to always forget to commit often. This tool solves that issue by setting 60 minute work intervals where an audible alert will play to remind the user that it's time to commit. 
 ## Deployed Application
@@ -20,7 +20,7 @@ Load the page in your browser and start the timer by clicking the button. Pressi
 ![clock](https://user-images.githubusercontent.com/73844213/194780037-af1f8e53-caa9-4974-900e-77c623d38888.png)
 
 ## License
-This repository is Unlicensed and free to use.
+This repository is protected under the MIT License.
 
 http://unlicense.org/
 ## Future Development
