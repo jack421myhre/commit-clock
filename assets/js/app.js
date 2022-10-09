@@ -77,7 +77,7 @@ function init() {
             alertSound.play();
 
         }
-    }, 1000);
+    }, 60000);
 
     // Starts the timer on the second section
     seconds -= 1;

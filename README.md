@@ -7,7 +7,7 @@ As I find my workflow on a project, I seem to always forget to commit often. Thi
 * [Usage](#usage)
 * [Screenshot](#screenshot)
 * [License](#license)
-* [Contributing](#contributing)
+* [Future Development](#futuredevelopment)
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
@@ -21,8 +21,8 @@ Load the page in your browser and start the timer by clicking the button. Pressi
 This repository is Unlicensed and free to use.
 
 http://unlicense.org/
-## Contributing
-none
+## Future Development
+Adding a slider for custom time intervals.
 ## Tests
 none
 ## Questions?
