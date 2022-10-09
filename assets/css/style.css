@@ -11,7 +11,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    
 }
 
 .container {
@@ -26,13 +25,28 @@ body {
 }
 
 .custom-button {
-    width: 200px;
-    height: 80px;
     background-color: #2b2d42;
+    padding: 12px;
     color: #edf2f4;
+    font-size: 36px;
 }
 
 .custom-button:hover {
+    background-color: #edf2f4;
+    color: #2b2d42;
+    cursor: pointer;
+}
+
+.rerun-button {
+    background-color: #2b2d42;
+    color: #edf2f4;
+    /* CHANGE TO SET WIDTH AND HEIGHT */
+    padding: 12px;
+    font-size: 18px;
+
+}
+
+.rerun-button:hover {
     background-color: #edf2f4;
     color: #2b2d42;
     cursor: pointer;
@@ -43,14 +57,18 @@ body {
     justify-content: center;
     align-items: center;
     border: 2px solid black;
-    width: 600px;
-    height: 200px;
-
+    /* CHANGE TO SET WIDTH AND HEIGHT */
+    padding: 42px 200px;
+    margin-bottom: 24px;
 }
 
 .countdown {
     font-size: 48px;
     font-weight: 300;
+}
+
+.message {
+    font-size: 24px;
 }
 
 /* EVENT LISTENER STYLES */

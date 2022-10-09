@@ -14,20 +14,29 @@
         <div class="container">
             <h1>Git Commit Clock</h1>
             <h2>Need a reminder to commit? </h2>
-            <h2>Click the button below to begin a timer and we'll remind you!</h2>
+            <h2>Don't worry, we've got you covered!</h2>
             <div class="start-container active">
                 <button class="custom-button" id="start-button">Click Me to Start!</button>
             </div>
             <div class="stop-container hidden">
                 <button class="custom-button" id="stop-button">Stop Timer</button>
             </div>
+            <div class="hidden" id="rerun">
+                <button class="rerun-button">
+                    Ready to work again?
+                </button>
+            </div>
         </div>
         <div class="timer" id="timer">
-            <h3 class="countdown">
-                <span id="minutes">30</span> :
+            <h3 class="countdown active">
+                <span id="minutes">45</span> :
                 <span id="seconds">00</span>
             </h3>
+            <div class="commit-message hidden" id="commit-message">
+                <h3 class="message">Time to Commit!</h3>
+            </div>
         </div>
+
     </main>
 
     <script src="./assets/js/app.js"></script>
