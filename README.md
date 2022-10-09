@@ -7,7 +7,7 @@ As I find my workflow on a project, I seem to always forget to commit often. Thi
 * [Usage](#usage)
 * [Screenshot](#screenshot)
 * [License](#license)
-* [Future Development](#futuredevelopment)
+* [Future Development](#future-development)
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
