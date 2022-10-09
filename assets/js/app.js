@@ -7,16 +7,21 @@ const commitMessage = document.getElementById('commit-message');
 const rerunContainer = document.getElementById('rerun');
 const startBtnContainer = document.querySelector('.start-container');
 const stopBtnContainer = document.querySelector('.stop-container');
-// class lists (Probably will delete)
-const startBtnClasslist = startBtnContainer.classList;
-const stopBtnClasslist = stopBtnContainer.classList;
-const commitMessageClasslist = commitMessage.classList;
+// Class lists
+const startClasses = startBtnContainer.classList;
+const stopClasses = stopBtnContainer.classList;
+const countClasses = countdown.classList;
+const msgClasses = commitMessage.classList;
+
 // Timer sections
 const minSection = document.getElementById('minutes');
 const secSection = document.getElementById('seconds');
+const alertSound = document.getElementById('alertSound');
 
 let minuteInterval;
 let secondInterval;
+alertSound.src = "./assets/sounds/alertSound.mp3";
+alertSound.load();
 
 function stopTimer() {
     clearInterval(minuteInterval);
@@ -24,37 +29,38 @@ function stopTimer() {
 }
 
 function buttonToggle() {
-    if (startBtnClasslist.contains('active')) {
-        stopBtnClasslist.replace('hidden', 'active');
-        startBtnClasslist.replace('active', 'hidden');
+    if (startClasses.contains('active')) {
+        stopClasses.replace('hidden', 'active');
+        startClasses.replace('active', 'hidden');
     } else {
-        startBtnClasslist.replace('hidden', 'active');
-        stopBtnClasslist.replace('active', 'hidden');
+        startClasses.replace('hidden', 'active');
+        stopClasses.replace('active', 'hidden');
     }
 }
 
 function commit() {
     // hidden
-    startBtnClasslist.replace('active', 'hidden');
-    stopBtnClasslist.replace('active', 'hidden');
-    countdown.classList.replace('active', 'hidden');
+    startClasses.replace('active', 'hidden');
+    stopClasses.replace('active', 'hidden');
+    countClasses.replace('active', 'hidden');
     // active
     rerunContainer.classList.replace('hidden', 'active');
-    commitMessageClasslist.replace('hidden', 'active');
+    msgClasses.replace('hidden', 'active');
 }
 
 function runAgain() {
     // hidden
-    commitMessageClasslist.replace('active', 'hidden');
+    msgClasses.replace('active', 'hidden');
     rerunContainer.classList.replace('active', 'hidden');
     // active
-    countdown.classList.replace('hidden', 'active');
-    stopBtnClasslist.replace('hidden', 'active');
+    countClasses.replace('hidden', 'active');
+    stopClasses.replace('hidden', 'active');
 }
+
 
 // Starts the application
 function init() {
-    let minutes = 44;
+    let minutes = 59;
     let seconds = 59;
     minSection.innerHTML = minutes;
     secSection.innerHTML = seconds;
@@ -65,11 +71,13 @@ function init() {
         minSection.innerHTML = minutes;
         minutes -= 1;
 
-        if (minutes < 0) {
+        if (minutes < -1) {
             stopTimer();
             commit();
+            alertSound.play();
+
         }
-    }, 60000);
+    }, 1000);
 
     // Starts the timer on the second section
     seconds -= 1;
@@ -91,9 +99,9 @@ function init() {
 // handler for starting the timer
 startBtn.addEventListener('click', () => {
     // Starts the timer
+    buttonToggle();
     init();
     // Switches the button
-    buttonToggle();
 });
 
 // Handler for stopping the timer
@@ -102,9 +110,10 @@ stopBtn.addEventListener('click', () => {
     stopTimer();
     // Switches the button again. When pressed, the timer will restart.
     buttonToggle();
+
 });
 
-// Handler for reruning app
+// Handler for rerunning app
 rerunContainer.addEventListener('click', () => {
     runAgain();
     init();
