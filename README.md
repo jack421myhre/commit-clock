@@ -2,9 +2,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Description
 As I find my workflow on a project, I seem to always forget to commit often. This tool solves that issue by setting 60 minute work intervals where an audible alert will play to remind the user that it's time to commit. 
-## Deployed Application
-https://jack421myhre.github.io/commit-clock/
 ## Table of Contents
+* [Deployment](#deployment)
+* [Motivations](#motivations)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Screenshot](#screenshot)
@@ -12,6 +12,10 @@ https://jack421myhre.github.io/commit-clock/
 * [Future Development](#future-development)
 * [Tests](#tests)
 * [Questions](#questions)
+## Deployment
+https://jack421myhre.github.io/commit-clock/
+## Motivations
+I found that heavy, well intended focus within a select period of time to be beneficial to an overall work flow. Taking breaks after defined intervals, where the sole focus is work, undistracted, I found yields great results in productivity. This tool is meant to help structure this productive work, lining up with a project, and git commit based expectation during this bootcamp. I hope that this tool provides you with a learning structure leading to nothing short of success. 
 ## Installation
 None required.
 ## Usage 
