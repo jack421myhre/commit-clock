@@ -60,7 +60,7 @@ function runAgain() {
 
 // Starts the application
 function init() {
-    let minutes = 59;
+    let minutes = 44;
     let seconds = 59;
     minSection.innerHTML = minutes;
     secSection.innerHTML = seconds;
